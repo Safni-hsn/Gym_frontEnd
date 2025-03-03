@@ -1,0 +1,159 @@
+/* 🌟 Ensure Full Page Background */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: url("./images/gym-bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  overflow-x: hidden; /* ✅ Prevent unwanted horizontal scrolling */
+}
+
+/* 🌟 Full-Screen Background Fix */
+.Member-dashboard-container {
+  width: 100vw;
+  min-height: 100vh;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+  position: relative;
+  background: rgba(0, 0, 0, 0.8); /* ✅ Darker background with slight transparency */
+  color: white; /* ✅ Ensures text is readable */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* ✅ Adds depth */
+  overflow: hidden;
+}
+
+/* 🌟 Trainer Dashboard Heading */
+.heading {
+  color: white;
+  margin-bottom: 15px;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+/* 🌟 Fixed Logout Button */
+.logoutButton {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #ff4757;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out, background 0.2s ease-in-out;
+  z-index: 1000;
+  width: auto;
+}
+
+.logoutButton:hover {
+  background: #e84118;
+  transform: scale(1.05);
+}
+
+/* 🌟 Grid Container (Fixing Row & Column Layout) */
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* ✅ Responsive 3-Column Layout */
+  gap: 20px; /* ✅ Proper spacing between cards */
+  padding: 20px;
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 🌟 Training Plan Cards */
+.card {
+  background: white;
+  width: 100%;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  padding: 15px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: rgb(11, 2, 2);
+}
+
+.shortDesc {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  color: rgb(94, 3, 3);
+}
+
+/* 🌟 Modal (Pop-up) */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalContent {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  width: 40%;
+  max-width: 500px;
+  text-align: center;
+  color: black;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.modalContent h3 {
+  margin-bottom: 10px;
+}
+
+.modalContent p {
+  font-size: 1.2rem;
+}
+
+.modalContent button {
+  background: #ff4757;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.modalContent button:hover {
+  background: #e84118;
+}
