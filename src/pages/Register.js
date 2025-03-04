@@ -14,7 +14,7 @@ const Register = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("https://gym-backend-ergcdybkbubchjbq.canadacentral-01.azurewebsites.net/api/auth/register", {
+      await axios.post("https://gym-backend-ergcdybkbubchjbq.canadacentral-01.azurewebsites.net/api/auth/register", {
         fullName,
         email,
         password,
