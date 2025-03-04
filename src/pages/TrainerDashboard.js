@@ -16,7 +16,7 @@ const TrainerDashboard = () => {
   }, []);
 
   const fetchMembers = () => {
-    axios.get("http://localhost:5126/api/members", {
+    axios.get("https://gym-backend-ergcdybkbubchjbq.canadacentral-01.azurewebsites.net/api/members", {
       headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
     })
     .then(response => setMembers(response.data))
@@ -24,7 +24,7 @@ const TrainerDashboard = () => {
   };
 
   const fetchTrainingPlans = () => {
-    axios.get("http://localhost:5126/api/training-plans", {
+    axios.get("https://gym-backend-ergcdybkbubchjbq.canadacentral-01.azurewebsites.net/api/training-plans", {
       headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
     })
     .then(response => setTrainingPlans(response.data))
@@ -34,7 +34,7 @@ const TrainerDashboard = () => {
   const handleCreatePlan = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5126/api/training-plans", {
+      await axios.post("https://gym-backend-ergcdybkbubchjbq.canadacentral-01.azurewebsites.net/api/training-plans", {
         title,
         description,
       }, {

@@ -13,7 +13,7 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5126/api/auth/login", {
+      const response = await axios.post("https://gym-backend-ergcdybkbubchjbq.canadacentral-01.azurewebsites.net/api/auth/login", {
         email,
         password,
       });

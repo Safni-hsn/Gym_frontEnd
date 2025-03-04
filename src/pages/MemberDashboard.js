@@ -13,7 +13,7 @@ const MemberDashboard = () => {
 
   const fetchTrainingPlans = () => {
     axios
-      .get("http://localhost:5126/api/training-plans", {
+      .get("https://gym-backend-ergcdybkbubchjbq.canadacentral-01.azurewebsites.net/api/training-plans", {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       })
       .then((response) => setTrainingPlans(response.data))
